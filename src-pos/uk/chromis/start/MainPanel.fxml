@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="950.0" style="-fx-border-color: #0000FF; -fx-border-width: 2;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox fx:id="selectionPanel" layoutX="2.0" layoutY="33.0" maxWidth="240.0" minWidth="200.0" prefHeight="647.0" prefWidth="200.0" style="-fx-background-color: #1f80ad;" />
+      <Pane fx:id="configPane" layoutX="200.0" layoutY="34.0" prefHeight="767.0" prefWidth="752.0" />
+      <VBox fx:id="buttonPanel" layoutX="2.0" layoutY="517.0" maxHeight="120.0" minHeight="120.0" prefHeight="120.0" prefWidth="200.0" style="-fx-background-color: #1f80ad;" AnchorPane.bottomAnchor="0.0" />
+      <Label fx:id="lblConnection" layoutX="8.0" layoutY="2.0" prefHeight="25.0" prefWidth="598.0" styleClass="titleLabel" text="Label">
+         <font>
+            <Font name="Liberation Serif Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblVersion" alignment="CENTER_RIGHT" layoutX="700.0" layoutY="2.0" minWidth="212.0" prefHeight="25.0" prefWidth="240.0" styleClass="titleLabel" text="Label">
+         <font>
+            <Font name="Liberation Serif Bold" size="15.0" />
+         </font>
+      </Label>
+      <Separator fx:id="separator" layoutX="3.0" layoutY="31.0" prefHeight="3.0" prefWidth="950.0" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="728.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.chromis.config.LocalePanelController">
+    <children>
+        <Label layoutX="462.0" layoutY="32.0" prefHeight="25.0" text="eg">
+            <font>
+                <Font name="Liberation Serif" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="462.0" layoutY="68.0" prefHeight="25.0" text="eg">
+            <font>
+                <Font name="Liberation Serif" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="462.0" layoutY="102.0" prefHeight="25.0" text="eg">
+            <font>
+                <Font name="Liberation Serif" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtDate" editable="false" focusTraversable="false" layoutX="484.0" layoutY="100.0" prefHeight="25.0" prefWidth="166.0">
+            <font>
+                <Font name="Liberation Serif" size="15.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="txtTime" editable="false" focusTraversable="false" layoutX="484.0" layoutY="30.0" prefHeight="25.0" prefWidth="166.0">
+            <font>
+                <Font name="Liberation Serif" size="15.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="txtDateTime" editable="false" focusTraversable="false" layoutX="484.0" layoutY="65.0" prefHeight="25.0" prefWidth="166.0">
+            <font>
+                <Font name="Liberation Serif" size="15.0" />
+            </font>
+        </TextField>
+        <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="29.0" prefHeight="25.0" prefWidth="145.0" text="%lbl.time">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="65.0" prefHeight="25.0" prefWidth="145.0" text="%lbl.datetime">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="100.0" prefHeight="25.0" prefWidth="145.0" text="%lbl.date">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <ComboBox fx:id="comboTime" layoutX="170.0" layoutY="30.0" prefHeight="25.0" prefWidth="254.0" styleClass="customcombo" />
+        <ComboBox fx:id="comboDateTime" layoutX="170.0" layoutY="65.0" prefHeight="25.0" prefWidth="254.0" styleClass="customcombo" />
+        <ComboBox fx:id="comboDate" layoutX="170.0" layoutY="100.0" prefHeight="25.0" prefWidth="254.0" styleClass="customcombo" />  
+        <Label alignment="CENTER_RIGHT" layoutX="-1.0" layoutY="135.0" prefHeight="25.0" prefWidth="166.0" text="Default System locale :">
+            <font>
+                <Font name="Liberation Serif Bold" size="14.0" />
+            </font>
+        </Label> 
+        <Label fx:id="txtlocale" layoutX="170.0" layoutY="135.0" prefHeight="25.0" text="locale">
+            <font>
+                <Font name="Liberation Serif Bold" size="14.0" />
+            </font>
+        </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="170.0" prefHeight="25.0" prefWidth="145.0" text="%lbl.integer">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+      <ComboBox fx:id="comboInteger" layoutX="170.0" layoutY="170.0" prefHeight="25.0" prefWidth="254.0" styleClass="customcombo" />
+      <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="205.0" prefHeight="25.0" prefWidth="145.0" text="%lbl.double">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+      <ComboBox fx:id="comboDouble" layoutX="170.0" layoutY="205.0" prefHeight="25.0" prefWidth="254.0" styleClass="customcombo" />
+      <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="240.0" prefHeight="25.0" prefWidth="145.0" text="%lbl.percent">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+      <ComboBox fx:id="comboPercent" layoutX="170.0" layoutY="240.0" prefHeight="25.0" prefWidth="254.0" styleClass="customcombo" />
+      <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="275.0" prefHeight="25.0" prefWidth="145.0" text="%lbl.currency">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+      <ComboBox fx:id="comboCurrency" layoutX="170.0" layoutY="275.0" prefHeight="25.0" prefWidth="254.0" styleClass="customcombo" />
+      <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="310.0" prefHeight="25.0" prefWidth="145.0" text="%lbl.country">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+      <ComboBox fx:id="comboLocale" layoutX="170.0" layoutY="310.0" prefHeight="25.0" prefWidth="254.0" styleClass="customcombo" />
+      <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="345.0" prefHeight="25.0" prefWidth="141.0" text="Chromis locale :">
+         <font>
+            <Font name="Liberation Serif Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="chromisLocale" layoutX="170.0" layoutY="345.0" prefHeight="25.0" text="chromisLocale">
+         <font>
+            <Font name="Liberation Serif Bold" size="14.0" />
+         </font>
+      </Label>
+
+        
+    </children>
+</AnchorPane>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import uk.chromis.custom.toggleswitch.ToggleSwitch?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="574.0" prefWidth="756.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.chromis.config.GeneralPanelController">
+    <children>
+        <Separator layoutX="-1.0" layoutY="243.0" prefHeight="3.0" prefWidth="756.0" />
+        <Label fx:id="lblStartUpPanel" layoutX="5.0" layoutY="251.0" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="172.0" styleClass="sectionlabel" text="%lbl.startUpScreen">
+            <font>
+                <Font name="Liberation Serif Bold" size="15.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnLogo" layoutX="577.0" layoutY="302.0" mnemonicParsing="false" onAction="#handleSelectLogoFile" prefHeight="25.0" prefWidth="46.0" style="-fx-border-radius: 5 5 5 5, 5 5 5 5; -fx-background-radius: 16;" />
+        <Button fx:id="btnClearLogo" layoutX="640.0" layoutY="302.0" mnemonicParsing="false" onAction="#handleClearLogo" prefHeight="25.0" prefWidth="46.0" style="-fx-border-radius: 5 5 5 5, 5 5 5 5; -fx-background-radius: 16; -fx-text-fill: #000000;" text="X">
+            <font>
+                <Font name="Liberation Serif Bold" size="14.0" />
+            </font>
+        </Button>
+      <Pane fx:id="iconPane" layoutX="457.0" layoutY="11.0" prefHeight="203.0" prefWidth="273.0">
+         <children>
+              <Pane fx:id="paneRoyalBlue" layoutX="30.0" layoutY="45.0" prefHeight="70.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-width: 2 2 2 2; -fx-border-radius: 20;" styleClass="radiopanel">
+                  <children>
+                      <RadioButton fx:id="rbtnRoyalBlue" layoutX="10.0" layoutY="7.0" mnemonicParsing="false" prefHeight="9.0" prefWidth="11.0" styleClass="radioButton">
+                     <toggleGroup>
+                              <ToggleGroup fx:id="iconColour" />
+                     </toggleGroup>
+                      </RadioButton>
+                      <ImageView fx:id="imgRoyalBlue" fitHeight="32.0" fitWidth="32.0" layoutX="4.0" layoutY="30.0" />
+                  </children>
+              </Pane>
+              <Pane fx:id="paneGreen" layoutX="85.0" layoutY="45.0" prefHeight="70.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-width: 2 2 2 2; -fx-border-radius: 20;" styleClass="radiopanel">
+                  <children>
+                      <RadioButton fx:id="rbtnGreen" layoutX="10.0" layoutY="7.0" mnemonicParsing="false" prefHeight="9.0" prefWidth="11.0" toggleGroup="$iconColour" />
+                      <ImageView fx:id="imgGreen" fitHeight="32.0" fitWidth="32.0" layoutX="4.0" layoutY="30.0" />
+                  </children>
+              </Pane>
+              <Pane fx:id="paneBlue" layoutX="140.0" layoutY="45.0" prefHeight="70.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-width: 2 2 2 2; -fx-border-radius: 20;" styleClass="radiopanel">
+                  <children>
+                      <RadioButton fx:id="rbtnBlue" layoutX="10.0" layoutY="7.0" mnemonicParsing="false" prefHeight="9.0" prefWidth="11.0" toggleGroup="$iconColour" />
+                      <ImageView fx:id="imgBlue" fitHeight="32.0" fitWidth="32.0" layoutX="4.0" layoutY="30.0" />
+                  </children>
+              </Pane>
+              <Pane fx:id="paneBlack" layoutX="195.0" layoutY="45.0" prefHeight="70.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-width: 2 2 2 2; -fx-border-radius: 20;" styleClass="radiopanel">
+                  <children>
+                      <RadioButton fx:id="rbtnBlack" layoutX="10.0" layoutY="7.0" mnemonicParsing="false" prefHeight="9.0" prefWidth="11.0" styleClass="radioButton" toggleGroup="$iconColour" />
+                      <ImageView fx:id="imgBlack" fitHeight="32.0" fitWidth="32.0" layoutX="4.0" layoutY="30.0" />
+                  </children>
+              </Pane>
+              <Label layoutX="8.0" layoutY="6.0" prefHeight="17.0" prefWidth="120.0" text="%lbl.iconColours">
+                  <font>
+                      <Font name="Liberation Serif" size="14.0" />
+                  </font>
+              </Label>
+         </children>
+      </Pane>
+        <RadioButton fx:id="clear" disable="true" layoutX="509.0" layoutY="325.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="21.0" toggleGroup="$iconColour" visible="false" />
+        <Separator layoutX="447.0" layoutY="9.0" orientation="VERTICAL" prefHeight="231.0" prefWidth="4.0" />
+        <Label fx:id="startUpLogoImage" layoutX="29.0" layoutY="296.0" prefHeight="270.0" prefWidth="525.0" style="-fx-background-color: #f0f0f0;" />
+        <ComboBox fx:id="skin" layoutX="170.0" layoutY="65.0" prefHeight="25.0" prefWidth="205.0" styleClass="customcombo" />
+        <ComboBox fx:id="screenType" layoutX="170.0" layoutY="100.0" prefHeight="25.0" prefWidth="205.0" styleClass="customcombo" />
+        <Label fx:id="testLabel" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="65.0" prefHeight="25.0" prefWidth="150.0" text="%lbl.looknfeel">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="100.0" prefHeight="25.0" prefWidth="150.0" text="%lbl.windowType">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+      <ComboBox fx:id="swingFont" layoutX="170.0" layoutY="135.0" prefHeight="25.0" prefWidth="205.0" styleClass="customcombo" />
+      <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="135.0" prefHeight="25.0" prefWidth="150.0" text="%lbl.windowFont">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="170.0" prefHeight="25.0" prefWidth="150.0" text="%lbl.windowFontSize">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="fontSize" layoutX="170.0" layoutY="170.0" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="91.0" />
+      <Label fx:id="lblStartUpPanel1" layoutX="5.0" layoutY="-1.0" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="172.0" styleClass="sectionlabel" text="%lbl.appearance">
+         <font>
+            <Font name="Liberation Serif Bold" size="15.0" />
+         </font>
+      </Label>
+      <ToggleSwitch fx:id="enableNewLogin" layoutX="170.0" layoutY="34.0" prefHeight="18.0" prefWidth="28.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="8.0" layoutY="30.0" prefHeight="25.0" prefWidth="156.0" text="%lbl.enableNewLogin">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="ticketLineSize" layoutX="170.0" layoutY="201.0" prefHeight="25.0" prefWidth="91.0" />
+      <Label fx:id="ticketLinesLabel" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="201.0" prefHeight="25.0" prefWidth="150.0" text="%lbl.ticketlinesize">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font>
+      </Label>                                            
+    </children>
+</AnchorPane>

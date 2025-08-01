@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import uk.chromis.custom.toggleswitch.ToggleSwitch?>
+
+<AnchorPane id="AnchorPane" prefHeight="580.0" prefWidth="799.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.chromis.config.NewButtonPanelController">
+    <children>
+        <Label fx:id="ticketLines" layoutX="14.0" layoutY="6.0" maxHeight="25.0" prefHeight="25.0" prefWidth="250.0" styleClass="sectionlabel" text="%lbl.categoryButtons">
+            <font>
+                <Font name="Liberation Serif Bold" size="15.0" />
+            </font>
+        </Label>
+        <ColorPicker fx:id="normalMessage" layoutX="15.0" layoutY="431.0" prefHeight="25.0" visible="false" />
+        <ColorPicker fx:id="waitingMessage" layoutX="256.0" layoutY="431.0" prefHeight="25.0" visible="false" />
+        <ColorPicker fx:id="sentMessage" layoutX="497.0" layoutY="431.0" prefHeight="25.0" visible="false" />
+        <Label fx:id="colouredLineMessage" layoutX="17.0" layoutY="406.0" prefHeight="17.0" prefWidth="360.0" text="Label" visible="false" />
+        <Label fx:id="buttonSizes" layoutX="14.0" layoutY="216.0" maxHeight="25.0" prefHeight="25.0" prefWidth="250.0" styleClass="sectionlabel" text="%lbl.productButtons">
+            <font>
+                <Font name="Liberation Serif Bold" size="15.0" />
+            </font>
+        </Label>
+        <ToggleSwitch fx:id="historicProductStyle" layoutX="58.0" layoutY="255.0" prefHeight="18.0" prefWidth="28.0" />
+        <Label layoutX="100.0" layoutY="250.0" prefHeight="25.0" prefWidth="508.0" text="%lbl.historicProductStyle">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+      <Separator layoutX="186.0" layoutY="200.0" prefHeight="4.0" prefWidth="590.0" visible="false" />
+      <Label fx:id="buttonSizes1" layoutX="48.0" layoutY="190.0" prefHeight="18.0" prefWidth="143.0" text="%lbl.salesPanelButtons" visible="false">
+         <font>
+            <Font name="Liberation Serif Bold" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="18.0" layoutY="200.0" prefHeight="0.0" prefWidth="28.0" visible="false" />
+      <ToggleSwitch fx:id="historicProductStyle1" layoutX="24.0" layoutY="231.0" prefHeight="18.0" prefWidth="28.0" visible="false" />
+      <ToggleSwitch fx:id="historicProductStyle2" layoutX="24.0" layoutY="259.0" prefHeight="18.0" prefWidth="28.0" visible="false" />
+      <ToggleSwitch fx:id="historicProductStyle3" layoutX="24.0" layoutY="290.0" prefHeight="18.0" prefWidth="28.0" visible="false" />
+      <HBox fx:id="productButtonBox" layoutX="56.0" layoutY="439.0" prefHeight="119.0" prefWidth="551.0" spacing="15.0">
+         <children>
+            <Pane prefHeight="112.0" prefWidth="170.0" style="-fx-border-image-width: 2; -fx-border-color: #1f80ad;">
+               <children>
+                  <ImageView fx:id="productButton1" fitHeight="100.0" fitWidth="140.0" layoutX="24.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+                  <RadioButton fx:id="productRB1" layoutX="3.0" layoutY="4.0" mnemonicParsing="false" selected="true">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="productSelector" />
+                     </toggleGroup>
+                  </RadioButton>
+               </children>
+            </Pane>
+            <Pane prefHeight="112.0" prefWidth="170.0" style="-fx-border-image-width: 2; -fx-border-color: #1f80ad;">
+               <children>
+                  <ImageView fx:id="productButton2" fitHeight="100.0" fitWidth="140.0" layoutX="24.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+                  <RadioButton fx:id="productRB2" layoutX="3.0" layoutY="4.0" mnemonicParsing="false" toggleGroup="$productSelector" />
+               </children>
+            </Pane>
+            <Pane prefHeight="112.0" prefWidth="170.0" style="-fx-border-image-width: 2; -fx-border-color: #1f80ad;">
+               <children>
+                  <ImageView fx:id="productButton3" fitHeight="100.0" fitWidth="140.0" layoutX="24.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+                  <RadioButton fx:id="productRB3" layoutX="3.0" layoutY="4.0" mnemonicParsing="false" toggleGroup="$productSelector" />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <Pane fx:id="historicPane" layoutX="59.0" layoutY="284.0" prefHeight="131.0" prefWidth="678.0">
+         <children>
+              <ToggleSwitch fx:id="textOpaque" layoutY="86.0" prefHeight="18.0" prefWidth="28.0" />
+              <Label layoutX="40.0" layoutY="83.0" prefHeight="25.0" prefWidth="170.0" text="%lbl.opaque">
+               <font>
+                  <Font name="Liberation Serif" size="14.0" />
+               </font>
+            </Label>
+              <ColorPicker fx:id="textColour" layoutY="49.0" prefHeight="25.0" prefWidth="125.0" />
+              <Label layoutX="139.0" layoutY="49.0" prefHeight="25.0" prefWidth="209.0" text="%lbl.buttonTextColour">
+               <font>
+                  <Font name="Liberation Serif" size="14.0" />
+               </font>
+            </Label>
+              <TextField fx:id="buttonWidth" layoutY="5.0" prefHeight="25.0" prefWidth="55.0">
+               <font>
+                  <Font name="Liberation Serif" size="15.0" />
+               </font>
+            </TextField>
+              <TextField fx:id="buttonHeight" layoutX="149.0" layoutY="3.0" prefHeight="25.0" prefWidth="55.0">
+               <font>
+                  <Font name="Liberation Serif" size="15.0" />
+               </font>
+            </TextField>
+              <Label layoutX="213.0" layoutY="6.0" prefHeight="25.0" prefWidth="64.0" text="%lbl.height">
+               <font>
+                  <Font name="Liberation Serif" size="14.0" />
+               </font>
+            </Label>
+              <Label layoutX="63.0" layoutY="8.0" prefHeight="25.0" prefWidth="74.0" text="%lbl.width">
+               <font>
+                  <Font name="Liberation Serif" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <HBox fx:id="productButtonBox1" layoutX="62.0" layoutY="80.0" prefHeight="119.0" prefWidth="551.0" spacing="15.0">
+         <children>
+            <Pane prefHeight="119.0" prefWidth="209.0" style="-fx-border-image-width: 2; -fx-border-color: #1f80ad;">
+               <children>
+                  <ImageView fx:id="categoryButton1" fitHeight="90.0" fitWidth="178.0" layoutX="24.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+                  <RadioButton fx:id="categoryRB1" layoutX="3.0" layoutY="4.0" mnemonicParsing="false" selected="true">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="categorySelector" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <Label layoutX="74.0" layoutY="98.0" text="140 x 60" />
+               </children>
+            </Pane>
+            <Pane prefHeight="112.0" prefWidth="170.0" style="-fx-border-image-width: 2; -fx-border-color: #1f80ad;">
+               <children>
+                  <ImageView fx:id="categoryButton2" fitHeight="90.0" fitWidth="140.0" layoutX="24.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+                  <RadioButton fx:id="categoryRB2" layoutX="3.0" layoutY="4.0" mnemonicParsing="false" toggleGroup="$categorySelector" />
+                  <Label layoutX="68.0" layoutY="97.0" text="100 x 65" />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <Label layoutX="243.0" layoutY="44.0" prefHeight="25.0" prefWidth="508.0" text="%lbl.categoryButtonTextColour">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font>
+      </Label>
+      <ColorPicker fx:id="cpCategoryColour" layoutX="64.0" layoutY="44.0" prefHeight="25.0" promptText="#FFFFFF" />
+      <Separator layoutX="9.0" layoutY="214.0" prefHeight="3.0" prefWidth="787.0" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import uk.chromis.custom.toggleswitch.ToggleSwitch?>
+
+<AnchorPane id="AnchorPane" prefHeight="580.0" prefWidth="799.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.chromis.config.ButtonPanelController">
+    <children>
+        <Label fx:id="ticketLines" layoutX="14.0" layoutY="4.0" maxHeight="25.0" prefHeight="25.0" prefWidth="253.0" styleClass="sectionlabel" text="%lbl.categoryButtons">
+            <font>
+                <Font name="Liberation Serif Bold" size="15.0" />
+            </font>
+        </Label>
+        <ColorPicker fx:id="normalMessage" layoutX="15.0" layoutY="431.0" prefHeight="25.0" visible="false" />
+        <ColorPicker fx:id="waitingMessage" layoutX="256.0" layoutY="431.0" prefHeight="25.0" visible="false" />
+        <ColorPicker fx:id="sentMessage" layoutX="497.0" layoutY="431.0" prefHeight="25.0" visible="false" />
+        <Label fx:id="colouredLineMessage" layoutX="17.0" layoutY="406.0" prefHeight="17.0" prefWidth="360.0" text="Label" visible="false" />
+        <Label fx:id="buttonSizes" layoutX="14.0" layoutY="80.0" maxHeight="25.0" prefHeight="25.0" prefWidth="231.0" styleClass="sectionlabel" text="%lbl.productButtons">
+            <font>
+                <Font name="Liberation Serif Bold" size="15.0" />
+            </font>
+        </Label>
+        <ToggleSwitch fx:id="historicProductStyle" layoutX="60.0" layoutY="115.0" prefHeight="18.0" prefWidth="28.0" />
+        <ToggleSwitch fx:id="textOpaque" layoutX="60.0" layoutY="229.0" prefHeight="18.0" prefWidth="28.0" />
+        <Label layoutX="100.0" layoutY="226.0" prefHeight="25.0" prefWidth="170.0" text="%lbl.opaque">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label layoutX="100.0" layoutY="110.0" prefHeight="25.0" prefWidth="286.0" text="%lbl.historicProductStyle">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <ColorPicker fx:id="textColour" layoutX="60.0" layoutY="188.0" prefHeight="25.0" prefWidth="125.0" />
+        <Label layoutX="199.0" layoutY="188.0" prefHeight="25.0" prefWidth="317.0" text="%lbl.buttonTextColour">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <TextField fx:id="buttonWidth" layoutX="60.0" layoutY="144.0" prefHeight="25.0" prefWidth="55.0">
+         <font>
+            <Font name="Liberation Serif" size="15.0" />
+         </font></TextField>
+        <TextField fx:id="buttonHeight" layoutX="214.0" layoutY="142.0" prefHeight="25.0" prefWidth="55.0">
+         <font>
+            <Font name="Liberation Serif" size="15.0" />
+         </font></TextField>
+        <Label layoutX="275.0" layoutY="144.0" prefHeight="25.0" prefWidth="107.0" text="%lbl.height">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label layoutX="122.0" layoutY="147.0" prefHeight="25.0" prefWidth="84.0" text="%lbl.width">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+      <ToggleSwitch fx:id="historicCategoryStyle" layoutX="60.0" layoutY="38.0" prefHeight="18.0" prefWidth="28.0" />
+      <Label layoutX="100.0" layoutY="33.0" prefHeight="25.0" prefWidth="279.0" text="%lbl.historicCategoryStyle">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+      <Separator layoutX="186.0" layoutY="200.0" prefHeight="4.0" prefWidth="590.0" visible="false" />
+      <Label fx:id="buttonSizes1" layoutX="48.0" layoutY="190.0" prefHeight="18.0" prefWidth="143.0" text="%lbl.salesPanelButtons" visible="false">
+         <font>
+            <Font name="Liberation Serif Bold" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="18.0" layoutY="200.0" prefHeight="0.0" prefWidth="28.0" visible="false" />
+      <ToggleSwitch fx:id="historicProductStyle1" layoutX="24.0" layoutY="231.0" prefHeight="18.0" prefWidth="28.0" visible="false" />
+      <ToggleSwitch fx:id="historicProductStyle2" layoutX="24.0" layoutY="259.0" prefHeight="18.0" prefWidth="28.0" visible="false" />
+      <ToggleSwitch fx:id="historicProductStyle3" layoutX="24.0" layoutY="290.0" prefHeight="18.0" prefWidth="28.0" visible="false" />
+      <Separator layoutX="3.0" layoutY="72.0" prefHeight="4.0" prefWidth="793.0" />
+    </children>
+</AnchorPane>

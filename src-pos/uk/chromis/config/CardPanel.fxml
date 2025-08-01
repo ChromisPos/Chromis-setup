@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import uk.chromis.custom.toggleswitch.ToggleSwitch?>
+
+<AnchorPane id="AnchorPane" prefHeight="673.0" prefWidth="833.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.chromis.config.CardPanelController">
+    <children>
+        <Separator layoutX="2.0" layoutY="318.0" prefHeight="3.0" prefWidth="823.0" />
+        <Label fx:id="lblScheme" alignment="CENTER_RIGHT" layoutX="50.0" layoutY="29.0" prefHeight="20.0" prefWidth="152.0" text="%lbl.loyaltySchemeType">
+            <font>
+                <Font name="Liberation Serif Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="schemeOptions" layoutX="11.0" layoutY="400.0" prefHeight="17.0" prefWidth="130.0" text="%lbl.msrSettings">
+            <font>
+                <Font name="Liberation Serif Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="colouredLineMessage" layoutX="20.0" layoutY="501.0" prefHeight="17.0" prefWidth="360.0" text="Label" visible="false" />
+        <Label fx:id="magneticCardReaderLeading" layoutX="188.0" layoutY="420.0" prefHeight="25.0" prefWidth="483.0" text="%lbl.leadingSentinel">
+            <font>
+                <Font name="Liberation Serif" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="magneticCardReaderTrailing" layoutX="188.0" layoutY="455.0" prefHeight="25.0" prefWidth="448.0" text="%lbl.trailingSentinel">
+            <font>
+                <Font name="Liberation Serif" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="magneticLeading" alignment="CENTER" layoutX="150.0" layoutY="418.0" prefHeight="25.0" prefWidth="28.0" text=";">
+            <font>
+                <Font name="Liberation Serif" size="15.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="magneticTrailing" alignment="CENTER" layoutX="150.0" layoutY="453.0" prefHeight="25.0" prefWidth="28.0" text="?">
+            <font>
+                <Font name="Liberation Serif" size="15.0" />
+            </font>
+        </TextField>
+        <RadioButton fx:id="earnx" layoutX="220.0" layoutY="29.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="265.0" text="%radio.earnx">
+            <font>
+                <Font name="Liberation Serif" size="14.0" />
+            </font>
+        </RadioButton>
+        <RadioButton fx:id="collectx" layoutX="220.0" layoutY="165.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="242.0" text="%radio.collectx">
+            <font>
+                <Font name="Liberation Serif" size="14.0" />
+            </font>
+        </RadioButton>
+        <TextField fx:id="earnXPoints" alignment="CENTER_RIGHT" layoutX="282.0" layoutY="58.0" prefHeight="25.0" prefWidth="50.0">
+         <font>
+            <Font name="Liberation Serif" size="15.0" />
+         </font></TextField>
+        <Label fx:id="getXPoints" layoutX="339.0" layoutY="58.0" prefHeight="25.0" prefWidth="379.0" text="%lbl.pointsEarned">
+            <font>
+                <Font name="Liberation Serif" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="voucherPoints" alignment="CENTER_RIGHT" layoutX="282.0" layoutY="93.0" prefHeight="25.0" prefWidth="50.0">
+         <font>
+            <Font name="Liberation Serif" size="15.0" />
+         </font></TextField>
+        <Label fx:id="voucherXPoints" layoutX="339.0" layoutY="96.0" prefHeight="25.0" prefWidth="379.0" text="%lbl.voucherPoints">
+            <font>
+                <Font name="Liberation Serif" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="voucherRedeemValue" alignment="CENTER_RIGHT" layoutX="282.0" layoutY="128.0" prefHeight="25.0" prefWidth="50.0">
+         <font>
+            <Font name="Liberation Serif" size="15.0" />
+         </font></TextField>
+        <Label fx:id="voucherValue" layoutX="339.0" layoutY="131.0" prefHeight="25.0" prefWidth="352.0" text="%lbl.voucherValue">
+            <font>
+                <Font name="Liberation Serif" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="warningLabel" layoutX="14.0" layoutY="221.0" prefHeight="25.0" prefWidth="692.0" text="Warning" textFill="#f51621" visible="false">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="loyaltyCardPrefix" alignment="CENTER_RIGHT" layoutX="282.0" layoutY="196.0" prefHeight="25.0" prefWidth="99.0">
+         <font>
+            <Font name="Liberation Serif" size="15.0" />
+         </font></TextField>
+        <Label fx:id="lblLoyaltyCardPrefix" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="30.0" layoutY="199.0" prefHeight="25.0" prefWidth="242.0" text="%lbl.loyaltyPrefix" textAlignment="CENTER">
+            <font>
+                <Font name="Liberation Serif" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="giftCardPrefix" alignment="CENTER_RIGHT" layoutX="150.0" layoutY="353.0" prefHeight="25.0" prefWidth="99.0">
+         <font>
+            <Font name="Liberation Serif" size="15.0" />
+         </font></TextField>
+        <Label fx:id="lblGiftCardPrefix" layoutX="254.0" layoutY="353.0" prefHeight="25.0" prefWidth="200.0" text="%lbl.giftcardPrefix">
+            <font>
+                <Font name="Liberation Serif" size="14.0" />
+            </font>
+        </Label>
+        <Separator layoutX="3.0" layoutY="392.0" prefHeight="3.0" prefWidth="823.0" />
+        <ToggleSwitch fx:id="tswShowAllOffers" layoutX="283.0" layoutY="236.0" prefHeight="18.0" prefWidth="28.0" />
+        <ToggleSwitch fx:id="tswLoyaltyEnabled" layoutX="13.0" layoutY="4.0" prefHeight="18.0" prefWidth="28.0" />
+        <Label layoutX="55.0" prefHeight="25.0" prefWidth="290.0" styleClass="LabelBold" text="%lbl.loyaltyEnabled">
+            <font>
+                <Font name="Liberation Serif Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblShowRewards" alignment="CENTER_RIGHT" layoutX="57.0" layoutY="232.0" prefHeight="25.0" prefWidth="220.0" text="%lbl.showAllRewards">
+            <font>
+                <Font name="Liberation Serif Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="10.0" layoutY="326.0" prefHeight="25.0" prefWidth="136.0" text="%lbl.giftcardsEnabled">
+            <font>
+                <Font name="Liberation Serif Bold" size="14.0" />
+            </font>
+        </Label>
+        <ToggleSwitch fx:id="tswGiftEnabled" layoutX="150.0" layoutY="330.0" prefHeight="18.0" prefWidth="28.0" />
+      <ToggleSwitch fx:id="tswAccountLoyalty" layoutX="283.0" layoutY="261.0" prefHeight="18.0" prefWidth="28.0" />
+      <Label fx:id="lblAccountEnabled" alignment="CENTER_RIGHT" layoutX="45.0" layoutY="256.0" prefHeight="25.0" prefWidth="228.0" text="%lbl.accountLoyaltyEnabled">
+         <font>
+            <Font name="Liberation Serif Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMessage" layoutX="14.0" layoutY="542.0" prefHeight="25.0" prefWidth="666.0" text="%lbl.cardBackupMessage" textFill="#1308ee">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Separator layoutX="3.0" layoutY="498.0" prefHeight="3.0" prefWidth="823.0" />
+      <Label fx:id="lblBackupDB" alignment="CENTER_RIGHT" layoutX="13.0" layoutY="583.0" prefHeight="25.0" prefWidth="183.0" text="%lbl.cardDatabase">
+         <font>
+            <Font name="Liberation Serif Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="txtBackupdb" layoutX="202.0" layoutY="580.0" prefHeight="25.0" prefWidth="136.0" promptText="chromis_trans">
+         <font>
+            <Font name="Liberation Serif" size="15.0" />
+         </font></TextField>
+      <Button fx:id="btnbackupTest" layoutX="386.0" layoutY="580.0" mnemonicParsing="false" onAction="#doConnectionTest" prefHeight="25.0" prefWidth="130.0" text="%btn.testConnection">
+         <font>
+            <Font name="Liberation Serif Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="btnCreateBackup" layoutX="534.0" layoutY="579.0" mnemonicParsing="false" onAction="#createBackup" prefHeight="25.0" prefWidth="130.0" text="%btn.createTable">
+         <font>
+            <Font name="Liberation Serif Bold" size="14.0" />
+         </font></Button>
+      <ProgressBar fx:id="pb" layoutX="14.0" layoutY="628.0" prefHeight="25.0" prefWidth="651.0" progress="0.0" />
+      <Label fx:id="lblProgressMsg" alignment="CENTER" layoutX="36.0" layoutY="632.0" prefHeight="17.0" prefWidth="586.0" text="%lbl.connectingToDB" textAlignment="CENTER">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="517.0" prefHeight="17.0" prefWidth="167.0" text="%lbl.cardBackup">
+         <font>
+            <Font name="Liberation Serif Bold" size="14.0" />
+         </font>
+      </Label>
+      <ToggleSwitch fx:id="tswRegisterCustomer" layoutX="283.0" layoutY="285.0" prefHeight="18.0" prefWidth="28.0" />
+      <Label fx:id="lblLoyaltyCustomer" alignment="CENTER_RIGHT" layoutX="45.0" layoutY="280.0" prefHeight="25.0" prefWidth="228.0" text="%lbl.loyaltyCustomer">
+         <font>
+            <Font name="Liberation Serif Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCustomerMessage" layoutX="329.0" layoutY="282.0" prefHeight="17.0" prefWidth="368.0" text="%lbl.loyaltyCustomerMessage">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+    </children>
+</AnchorPane>

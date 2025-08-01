@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import uk.chromis.custom.toggleswitch.ToggleSwitch?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="734.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.chromis.config.TicketPanelController">
+   <children>
+      <ToggleSwitch fx:id="receiptPrinterOff" layoutX="108.0" layoutY="109.0" prefHeight="18.0" prefWidth="28.0" />
+      <ToggleSwitch fx:id="serviceChargeOff" layoutX="107.0" layoutY="244.0" prefHeight="18.0" prefWidth="32.0" />
+      <ToggleSwitch fx:id="layawayId" layoutX="102.0" layoutY="440.0" prefHeight="18.0" prefWidth="32.0" />
+      <ToggleSwitch fx:id="createOnOrderOnly" layoutX="102.0" layoutY="366.0" prefHeight="18.0" prefWidth="28.0" />
+      <ToggleSwitch fx:id="layawayPopup" layoutX="102.0" layoutY="467.0" prefHeight="18.0" prefWidth="32.0" />
+      <Label fx:id="receiptLength" layoutX="156.0" layoutY="45.0" prefHeight="25.0" prefWidth="460.0" text="%lbl.receiptLength">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+      <Label fx:id="pickupLength" layoutX="156.0" layoutY="75.0" prefHeight="25.0" prefWidth="391.0" text="%lbl.pickupLength">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+      <Spinner fx:id="receiptSpinner" layoutX="71.0" layoutY="44.0" prefHeight="25.0" prefWidth="71.0" />
+      <Spinner fx:id="pickupSpinner" layoutX="71.0" layoutY="76.0" prefHeight="25.0" prefWidth="71.0" styleClass="customspinner" />
+      <ToggleSwitch fx:id="SCRestaurant" layoutX="106.0" layoutY="269.0" prefHeight="18.0" prefWidth="28.0" />
+      <Label fx:id="percent" layoutX="143.0" layoutY="212.0" text="\%" />
+      <Label layoutX="14.0" layoutY="5.0" prefHeight="25.0" prefWidth="267.0" styleClass="sectionlabel" text="%lbl.receiptSetup">
+         <font>
+            <Font name="Liberation Serif Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="serviceCharge" layoutX="14.0" layoutY="176.0" prefHeight="25.0" prefWidth="491.0" styleClass="sectionlabel" text="%lbl.serviceCharge">
+         <font>
+            <Font name="Liberation Serif Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="layawayDetails" layoutX="14.0" layoutY="305.0" prefHeight="25.0" prefWidth="391.0" styleClass="sectionlabel" text="%lbl.pickupID">
+         <font>
+            <Font name="Liberation Serif Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="160.0" layoutY="206.0" maxHeight="25.0" prefHeight="25.0" prefWidth="391.0" text="%lbl.scRate">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+      <TextField fx:id="textSCRate" alignment="CENTER_RIGHT" layoutX="71.0" layoutY="206.0" prefHeight="28.0" prefWidth="71.0">
+         <font>
+            <Font name="Liberation Serif" size="15.0" />
+         </font></TextField>
+      <Label layoutX="156.0" layoutY="106.0" prefHeight="25.0" prefWidth="391.0" text="%lbl.receiptPrintAlways">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+      <Label layoutX="150.0" layoutY="437.0" prefHeight="25.0" prefWidth="450.0" text="%lbl.usePickupId">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+      <Label layoutX="150.0" layoutY="464.0" prefHeight="25.0" prefWidth="460.0" text="%lbl.autoOpenLayaway">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+      <Label layoutX="150.0" layoutY="363.0" prefHeight="25.0" prefWidth="416.0" text="%lbl.createOnOrder">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+      <Label contentDisplay="RIGHT" layoutX="155.0" layoutY="266.0" prefHeight="25.0" prefWidth="337.0" text="%lbl.restaurantMode">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+      <Label layoutX="155.0" layoutY="240.0" prefHeight="25.0" prefWidth="291.0" text="%lbl.serviceChargeEnabled">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+      <ToggleSwitch fx:id="pickupEnabled" layoutX="102.0" layoutY="339.0" prefHeight="18.0" prefWidth="32.0" />
+      <Label fx:id="layawayDetails1" layoutX="14.0" layoutY="407.0" prefHeight="25.0" prefWidth="366.0" styleClass="sectionlabel" text="%lbl.layaway">
+         <font>
+            <Font name="Liberation Serif Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="150.0" layoutY="336.0" prefHeight="25.0" prefWidth="366.0" text="%lbl.enablePickup">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+      <Label fx:id="pickupLength1" layoutX="155.0" layoutY="134.0" prefHeight="25.0" prefWidth="565.0" text="%lbl.receiptAutoClose">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+      <Spinner fx:id="receiptCloseSpinner" layoutX="70.0" layoutY="134.0" prefHeight="25.0" prefWidth="71.0" />
+      <ToggleSwitch fx:id="sharedaccess" layoutX="102.0" layoutY="539.0" prefHeight="18.0" prefWidth="32.0" />
+      <Label layoutX="150.0" layoutY="536.0" prefHeight="25.0" prefWidth="200.0" text="%lbl.sharedTicket">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="508.0" prefHeight="25.0" prefWidth="337.0" styleClass="sectionlabel" text="%lbl.ticketaccess">
+         <font>
+            <Font name="Liberation Serif Bold" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="2.0" layoutY="170.0" prefHeight="3.0" prefWidth="806.0" />
+      <Separator layoutX="2.0" layoutY="298.0" prefHeight="3.0" prefWidth="806.0" />
+      <Separator layoutX="1.0" layoutY="400.0" prefHeight="3.0" prefWidth="806.0" />
+      <Separator layoutX="1.0" layoutY="502.0" prefHeight="3.0" prefWidth="806.0" />
+   </children>
+</AnchorPane>

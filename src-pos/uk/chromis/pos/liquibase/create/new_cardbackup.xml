@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+
+    <property name="boolean.type" value="bit" dbms="mysql"/>   
+    <property name="blob.type" value="longblob" dbms="mysql"/>
+    <property name="boolean.type" value="bit" dbms="mariadb"/> 
+    <property name="blob.type" value="mediumblob" dbms="mariadb"/>
+
+  
+    <changeSet author="Chromis POS" id="Loyaltycards Table (db V1.00)">     
+        <createTable tableName="loyaltycards">
+            <column name="id" type="varchar(40)" />
+            <column name="cardnumber" type="varchar(50)"/>
+            <column name="processdate" type="timestamp"  />                
+            <column name="active" type="${boolean.type}" />
+            <column name="cardlocked" type="${boolean.type}" />
+            <column name="replaced" type="${boolean.type}" />
+            <column name="removed" type="${boolean.type}" />
+            <column name="oldcardnumber" type="varchar(50)" />
+            <column name="currentpoints" type="int" />
+            <column name="customerid" type="varchar(50)"/>
+            <column name="sflag" type="${boolean.type}" />   
+            <column name="siteguid" type="varchar(50)"/>
+        </createTable>            
+        <modifySql dbms="mysql, mariadb">
+            <append value=" ENGINE = InnoDB DEFAULT CHARSET=utf8mb4  "/>
+        </modifySql>
+    </changeSet> 
+    
+    <changeSet author="Chromis POS" id="Loyalty Transaction Table (db V1.00)">     
+        <createTable tableName="loyaltytrans">
+            <column name="id" type="bigint" />
+            <column name="cardnumber" type="varchar(50)"/>
+            <column name="customerid" type="varchar(50)"/>
+            <column name="activitydate" type="timestamp" />  
+            <column name="activity" type="varchar(150)"/>
+            <column name="activitypoints" type="int" />
+            <column name="activitytype" type="int" />
+            <column name="cashier" type="varchar(50)"/>               
+            <column name="cardbalance" type="int"/>
+            <column name="ticketid" type="varchar(50)"/>
+            <column name="ticketdetails" type="${blob.type}"/>   
+            <column name="voucherid" type="varchar(50)"/>
+            <column name="sflag" type="${boolean.type}" />  
+            <column name="siteguid" type="varchar(50)"/>
+        </createTable>            
+        <modifySql dbms="mysql, mariadb">
+            <append value=" ENGINE = InnoDB DEFAULT CHARSET=utf8mb4  "/>
+        </modifySql>
+    </changeSet> 
+     
+    <changeSet author="Chromis POS" id="Giftcard Table (db V1.00)">     
+        <createTable tableName="giftcards">
+            <column name="id" type="varchar(40)"/>
+            <column name="cardnumber" type="varchar(50)"/>
+            <column name="processdate" type="timestamp" />                
+            <column name="active" type="${boolean.type}" />
+            <column name="currentvalue" type="numeric(10,3)" />
+            <column name="customerid" type="varchar(50)"/>
+            <column name="sflag" type="${boolean.type}" />   
+            <column name="siteguid" type="varchar(50)"/>
+        </createTable>            
+        <modifySql dbms="mysql, mariadb">
+            <append value=" ENGINE = InnoDB DEFAULT CHARSET=utf8mb4  "/>
+        </modifySql>
+    </changeSet>
+
+    <changeSet author="Chromis POS" id="Giftcard transaction Table (db V1.00)">     
+        <createTable tableName="giftcardtrans">
+            <column name="id" type="bigint" />
+            <column name="cardnumber" type="varchar(50)"/>
+            <column name="activitydate" type="timestamp"  />  
+            <column name="activity" type="varchar(150)" />
+            <column name="spendvalue" type="numeric(12,2)"/>
+            <column name="cardbalancevalue" type="numeric(12,2)"/>
+            <column name="ticketid" type="varchar(50)"/>
+            <column name="ticketdetails" type="${blob.type}"/>   
+            <column name="sflag" type="${boolean.type}"/>  
+            <column name="siteguid" type="varchar(50)"/>
+        </createTable>            
+        <modifySql dbms="mysql, mariadb">
+            <append value=" ENGINE = InnoDB DEFAULT CHARSET=utf8mb4  "/>
+        </modifySql>
+    </changeSet>
+    
+    <changeSet author="Chromis POS" id="Set up primarykeys (db V1.00)"  >                         
+        <sql>alter table loyaltycards add primary key (id, siteguid)</sql>    
+        <sql>alter table giftcards add primary key (id, siteguid)</sql>                                       
+    </changeSet>   
+   
+    
+    <changeSet author="Chromis POS" id="Set up Card Backup Triggers (db V1.00)"  >                         
+        <customChange class="uk.chromis.pos.liquibase.create.CreateCardTriggers">
+            <param name="dbaseName" value="${dbName}" /> 
+        </customChange>                                       
+    </changeSet>      
+
+</databaseChangeLog>
+

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import uk.chromis.custom.toggleswitch.ToggleSwitch?>
+
+<AnchorPane id="anchorPane" fx:id="anchorPane" prefHeight="642.0" prefWidth="799.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.chromis.config.SystemPanelController">
+    <children>
+        <Separator layoutX="5.0" layoutY="116.0" prefHeight="4.0" prefWidth="793.0" />
+        <Label fx:id="general" layoutX="14.0" layoutY="121.0" prefHeight="25.0" prefWidth="392.0" styleClass="sectionlabel" text="%lbl.system">
+            <font>
+                <Font name="Liberation Serif Bold" size="15.0" />
+            </font>
+        </Label>
+        <ToggleSwitch fx:id="enableAutoLogoff" layoutX="16.0" layoutY="8.0" prefHeight="18.0" prefWidth="28.0" />
+        <ToggleSwitch fx:id="inactivityTimer" layoutX="70.0" layoutY="31.0" prefHeight="18.0" prefWidth="28.0" />
+        <ToggleSwitch fx:id="autologoffAfterSale" layoutX="70.0" layoutY="56.0" prefHeight="18.0" prefWidth="28.0" />
+        <ToggleSwitch fx:id="autoLogoffAfterKitchen" layoutX="70.0" layoutY="83.0" prefHeight="18.0" prefWidth="28.0" />
+        <ToggleSwitch fx:id="autoLogoffToTables" layoutX="410.0" layoutY="57.0" prefHeight="18.0" prefWidth="28.0" />
+        <ToggleSwitch fx:id="autoLogoffAfterPrint" layoutX="410.0" layoutY="83.0" prefHeight="18.0" prefWidth="28.0" />
+        <ToggleSwitch fx:id="textOverlay" layoutX="70.0" layoutY="205.0" prefHeight="18.0" prefWidth="28.0" />
+        <ToggleSwitch fx:id="consolidate" layoutX="410.0" layoutY="155.0" prefHeight="18.0" prefWidth="28.0" />
+        <ToggleSwitch fx:id="price00" layoutX="70.0" layoutY="180.0" prefHeight="18.0" prefWidth="28.0" />
+        <ToggleSwitch fx:id="disableDefaultProduct" layoutX="410.0" layoutY="180.0" prefHeight="18.0" prefWidth="28.0" />
+        <ToggleSwitch fx:id="updatedbprice" layoutX="70.0" layoutY="230.0" prefHeight="18.0" prefWidth="28.0" />
+        <ToggleSwitch fx:id="categoriesBynumber" layoutX="70.0" layoutY="155.0" prefHeight="18.0" prefWidth="28.0" />
+        <ToggleSwitch fx:id="maxChangeEnable" layoutX="70.0" layoutY="255.0" prefHeight="18.0" prefWidth="28.0" />
+        <Separator layoutX="4.0" layoutY="358.0" prefHeight="3.0" prefWidth="793.0" />
+        <ColorPicker fx:id="normalMessage" layoutX="15.0" layoutY="431.0" prefHeight="25.0" visible="false" />
+        <ColorPicker fx:id="waitingMessage" layoutX="256.0" layoutY="431.0" prefHeight="25.0" visible="false" />
+        <ColorPicker fx:id="sentMessage" layoutX="497.0" layoutY="431.0" prefHeight="25.0" visible="false" />
+        <Label fx:id="colouredLineMessage" layoutX="17.0" layoutY="406.0" prefHeight="17.0" prefWidth="360.0" text="Label" visible="false" />
+        <ToggleSwitch fx:id="enablePaymentIcons" layoutX="410.0" layoutY="205.0" prefHeight="18.0" prefWidth="28.0" />
+        <Label layoutX="54.0" layoutY="3.0" prefHeight="25.0" prefWidth="214.0" text="%lbl.autoLogonOffEnable">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label fx:id="lblInactivityTimer" layoutX="108.0" layoutY="26.0" prefHeight="25.0" prefWidth="280.0" text="%lbl.inactivityTimer">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label fx:id="lblAutologoffAfterSale" layoutX="108.0" layoutY="52.0" prefHeight="25.0" prefWidth="280.0" text="%lbl.logoffAfterSale">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label fx:id="lblAutoLogoffAfterKitchen" layoutX="108.0" layoutY="78.0" prefHeight="25.0" prefWidth="280.0" text="%lbl.enableLogoffKitchen">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label fx:id="lblAutoLogoffToTables" layoutX="450.0" layoutY="52.0" prefHeight="25.0" prefWidth="268.0" text="%lbl.restaurantModeToTables">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label fx:id="lblAutoLogoffAfterPrint" layoutX="450.0" layoutY="78.0" prefHeight="25.0" prefWidth="292.0" text="%lbl.logoffAfterPrinting">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label layoutX="110.0" layoutY="251.0" prefHeight="25.0" prefWidth="280.0" text="%lbl.maxchange">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label layoutX="110.0" layoutY="226.0" prefHeight="25.0" prefWidth="280.0" text="%lbl.editupdate">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label layoutX="110.0" layoutY="201.0" prefHeight="25.0" prefWidth="280.0" text="%lbl.paymentoverlay">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label layoutX="450.0" layoutY="150.0" prefHeight="25.0" prefWidth="316.0" text="%lbl.consolidate">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label layoutX="110.0" layoutY="176.0" prefHeight="25.0" prefWidth="280.0" text="%lbl.00button">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label layoutX="110.0" layoutY="150.0" prefHeight="25.0" prefWidth="280.0" text="%lbl.categoryorder">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label layoutX="450.0" layoutY="175.0" prefHeight="25.0" prefWidth="316.0" text="%lbl.defaultproduct">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label layoutX="450.0" layoutY="201.0" prefHeight="25.0" prefWidth="316.0" text="%lbl.paymenticons">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label layoutX="451.0" layoutY="252.0" prefHeight="25.0" text="%lbl.maxChangeAmount">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label layoutX="410.0" layoutY="26.0" prefHeight="25.0" text="%lbl.logoffTimer">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <TextField fx:id="maxChange" alignment="CENTER_RIGHT" layoutX="383.0" layoutY="252.0" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="61.0">
+         <font>
+            <Font name="Liberation Serif" size="15.0" />
+         </font></TextField>
+        <TextField fx:id="autoLogoffTime" layoutX="515.0" layoutY="26.0" prefHeight="28.0" prefWidth="55.0">
+         <font>
+            <Font name="Liberation Serif" size="15.0" />
+         </font></TextField>
+      <Label fx:id="ticketLines1" layoutX="14.0" layoutY="363.0" prefHeight="25.0" prefWidth="268.0" styleClass="sectionlabel" text="%lbl.auditing">
+         <font>
+            <Font name="Liberation Serif Bold" size="15.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="auditNoSales" layoutX="25.0" layoutY="394.0" prefHeight="25.0" prefWidth="70.0" />
+      <Spinner fx:id="auditRemovedLines" layoutX="25.0" layoutY="427.0" prefHeight="25.0" prefWidth="70.0" />
+      <Label layoutX="105.0" layoutY="395.0" prefHeight="25.0" prefWidth="354.0" text="%lbl.cleanNoSale">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+      <Label layoutX="105.0" layoutY="427.0" prefHeight="25.0" prefWidth="354.0" text="%lbl.cleanRemoved">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+      <ToggleSwitch fx:id="enableSentRefunds" layoutX="410.0" layoutY="230.0" prefHeight="18.0" prefWidth="32.0" />
+      <Label layoutX="450.0" layoutY="230.0" prefHeight="20.0" prefWidth="316.0" text="%lbl.allowSent">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+      <ToggleSwitch fx:id="enableScreenDrag" layoutX="70.0" layoutY="305.0" prefHeight="18.0" prefWidth="28.0" />
+      <Label layoutX="110.0" layoutY="301.0" prefHeight="25.0" prefWidth="543.0" text="%lbl.enableScreenDrag">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font>
+      </Label>
+      <ToggleSwitch fx:id="enableTaxExemption" layoutX="70.0" layoutY="280.0" prefHeight="18.0" prefWidth="28.0" />
+      <Label layoutX="110.0" layoutY="276.0" prefHeight="25.0" prefWidth="449.0" text="%lbl.allowExemption">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

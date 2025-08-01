@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import uk.chromis.custom.toggleswitch.ToggleSwitch?>
+
+<AnchorPane id="AnchorPane" prefHeight="589.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.chromis.config.RestaurantPanelController">
+    <children>
+        <Label fx:id="sectionLabel" layoutX="14.0" layoutY="7.0" maxHeight="25.0" prefHeight="25.0" prefWidth="424.0" styleClass="sectionlabel" text="%lbl.tableDisplay">
+            <font>
+                <Font name="Liberation Serif Bold" size="15.0" />
+            </font>
+        </Label>
+        <ToggleSwitch fx:id="tsWaiterDetails" layoutX="80.0" layoutY="171.0" prefHeight="18.0" prefWidth="28.0" />
+        <ToggleSwitch fx:id="tsCustomerDetails" layoutX="80.0" layoutY="141.0" prefHeight="18.0" prefWidth="28.0" />
+        <ToggleSwitch fx:id="tsTransparent" layoutX="80.0" layoutY="201.0" prefHeight="18.0" prefWidth="28.0" />
+        <ToggleSwitch fx:id="tsTableRefresh" layoutX="80.0" layoutY="231.0" prefHeight="18.0" prefWidth="28.0" />
+        <Label fx:id="jTicketLinesLabel" layoutX="14.0" layoutY="274.0" maxHeight="25.0" prefHeight="25.0" prefWidth="424.0" styleClass="sectionlabel" text="%lbl.colouredTicketLines">
+            <font>
+                <Font name="Liberation Serif Bold" size="15.0" />
+            </font>
+        </Label>
+        <ToggleSwitch fx:id="tsColouredLines" layoutX="80.0" layoutY="310.0" prefHeight="18.0" prefWidth="28.0" />
+        <Label layoutX="125.0" layoutY="136.0" prefHeight="25.0" prefWidth="293.0" text="%lbl.customerOnTable">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label layoutX="125.0" layoutY="166.0" prefHeight="25.0" prefWidth="293.0" text="%lbl.waiterOnTable">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label layoutX="128.0" layoutY="196.0" prefHeight="25.0" prefWidth="293.0" text="%lbl.transparentButtons">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label layoutX="128.0" layoutY="226.0" prefHeight="25.0" prefWidth="287.0" text="%lbl.autoRefreshTables">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label layoutX="128.0" layoutY="305.0" prefHeight="25.0" prefWidth="337.0" text="%lbl.enabledColouredLines">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label layoutX="240.0" layoutY="40.0" prefHeight="25.0" prefWidth="221.0" text="%lbl.customerTextColour">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label layoutX="240.0" layoutY="73.0" prefHeight="25.0" prefWidth="221.0" text="%lbl.waiterTextColour">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label layoutX="240.0" layoutY="100.0" prefHeight="25.0" prefWidth="221.0" text="%lbl.tableNameTextColour">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label layoutX="250.0" layoutY="341.0" prefHeight="25.0" prefWidth="269.0" text="%lbl.orderNotSentColour">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <Label layoutX="250.0" layoutY="371.0" prefHeight="25.0" prefWidth="287.0" text="%lbl.orderSentColour">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+        <ColorPicker fx:id="cpLineWaitingBackground" layoutX="80.0" layoutY="341.0" prefHeight="25.0" />
+        <ColorPicker fx:id="cpLineSentBackground" layoutX="80.0" layoutY="371.0" prefHeight="25.0" />
+        <ColorPicker fx:id="cpCustomerColour" layoutX="80.0" layoutY="40.0" prefHeight="25.0" promptText="#FFFFFF" />
+        <ColorPicker fx:id="cpWaiterColour" layoutX="80.0" layoutY="70.0" prefHeight="25.0" promptText="#FFFFFF" />
+        <ColorPicker fx:id="cpTableColour" layoutX="80.0" layoutY="100.0" prefHeight="25.0" promptText="#FFFFFF" />
+      <Label fx:id="jTicketLinesLabel1" layoutX="14.0" layoutY="416.0" maxHeight="25.0" prefHeight="25.0" prefWidth="510.0" styleClass="sectionlabel" text="%lbl.purchaseorder">
+         <font>
+            <Font name="Liberation Serif Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="pickupLength" layoutX="250.0" layoutY="453.0" prefHeight="25.0" prefWidth="348.0" text="%lbl.purchaseprefix">
+         <font>
+            <Font name="Liberation Serif" size="14.0" />
+         </font></Label>
+      <TextField fx:id="poPrefix" layoutX="80.0" layoutY="450.0" prefHeight="31.0" prefWidth="155.0">
+         <font>
+            <Font name="Liberation Serif" size="15.0" />
+         </font></TextField>
+      <Separator layoutX="2.0" layoutY="266.0" prefHeight="4.0" prefWidth="793.0" />
+      <Separator layoutX="2.0" layoutY="410.0" prefHeight="4.0" prefWidth="793.0" />
+    </children>
+</AnchorPane>
